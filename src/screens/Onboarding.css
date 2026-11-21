@@ -1,0 +1,139 @@
+.onb {
+  padding-top: var(--safe-top);
+  user-select: none;
+}
+.onb-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px var(--gutter) 10px;
+  min-height: 64px;
+}
+.onb-skip {
+  color: var(--ink-2);
+  background: var(--sand);
+}
+.onb-skip:hover {
+  background: var(--sand-2);
+}
+.onb-main {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0 var(--gutter);
+}
+.onb-slide {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  animation: onb-in 380ms var(--ease) both;
+}
+@keyframes onb-in {
+  from {
+    opacity: 0;
+    transform: translateX(18px);
+  }
+}
+.onb-media {
+  position: relative;
+  flex: 1;
+  min-height: 200px;
+  border-radius: var(--r-xl);
+  overflow: hidden;
+}
+.onb-media .img {
+  height: 100%;
+}
+.onb-chip {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px 8px 8px;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.95);
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  box-shadow: var(--shadow-2);
+  animation: rise 420ms 160ms var(--ease) both;
+}
+.onb-chip-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--accent);
+  color: #fff;
+}
+.onb-chip.is-success .onb-chip-icon {
+  background: var(--green);
+}
+.onb-copy {
+  padding: 26px 4px 4px;
+}
+.onb-copy h1 {
+  text-wrap: balance;
+  font-size: var(--fs-3xl);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  max-width: 14ch;
+}
+.onb-copy p {
+  margin-top: 10px;
+  color: var(--ink-2);
+  font-size: var(--fs-md);
+  max-width: 34ch;
+}
+.onb-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px var(--gutter) calc(20px + var(--safe-bottom));
+}
+.onb-dots {
+  display: flex;
+  gap: 2px;
+}
+.onb-dots button {
+  width: 36px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+.onb-dots button::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 99px;
+  background: var(--line-2);
+  transition:
+    width 260ms var(--ease),
+    background-color 200ms;
+}
+.onb-dots button.is-done::before {
+  background: var(--ink-3);
+}
+.onb-dots button.is-active::before {
+  width: 26px;
+  background: var(--accent);
+}
+.onb-next {
+  min-width: 150px;
+}
+
+@media (max-height: 700px) {
+  .onb-copy h1 {
+    font-size: var(--fs-2xl);
+  }
+  .onb-copy {
+    padding-top: 16px;
+  }
+}

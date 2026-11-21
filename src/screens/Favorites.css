@@ -1,0 +1,62 @@
+.fav-list {
+  padding-top: 16px;
+}
+.fav-r {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.fav-d {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.fav-dish {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  border-radius: var(--r-lg);
+  background: var(--surface);
+  box-shadow: inset 0 0 0 1px var(--line);
+  animation: rise 240ms var(--ease) both;
+}
+.fav-dish-img {
+  width: 76px;
+  height: 76px;
+  border-radius: 14px;
+  flex-shrink: 0;
+}
+.fav-dish-text {
+  flex: 1;
+  min-width: 0;
+}
+.fav-dish-text h3 {
+  font-size: var(--fs-md);
+  font-weight: 700;
+}
+.fav-dish-text p {
+  font-size: var(--fs-xs);
+  color: var(--ink-3);
+}
+.fav-dish-text .fav-dish-price {
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  color: var(--ink);
+  margin-top: 2px;
+}
+.fav-dish-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  position: relative;
+  z-index: 2;
+}
+.fav-dish-actions .fav-btn {
+  box-shadow: none;
+  background: var(--accent-soft);
+}

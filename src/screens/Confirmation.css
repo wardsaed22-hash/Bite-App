@@ -1,0 +1,110 @@
+.confirm-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: calc(48px + var(--safe-top));
+  padding-bottom: 24px;
+}
+.confirm-check {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--green-soft);
+  margin-bottom: 20px;
+  animation: confirm-pop 520ms var(--ease) both;
+}
+.confirm-check circle {
+  stroke: var(--green);
+  stroke-width: 3;
+  stroke-dasharray: 151;
+  stroke-dashoffset: 151;
+  animation: draw 600ms 150ms var(--ease) forwards;
+}
+.confirm-check path {
+  stroke: var(--green);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 40;
+  stroke-dashoffset: 40;
+  animation: draw 380ms 600ms var(--ease) forwards;
+}
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes confirm-pop {
+  from {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .confirm-check circle,
+  .confirm-check path {
+    stroke-dashoffset: 0;
+  }
+}
+.confirm h1 {
+  font-size: var(--fs-3xl);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+.confirm-lead {
+  margin-top: 8px;
+  color: var(--ink-2);
+  max-width: 32ch;
+}
+.confirm-card {
+  width: 100%;
+  margin-top: 28px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  animation: rise 400ms 300ms var(--ease) both;
+}
+.confirm-card > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+.confirm-card dt {
+  color: var(--ink-3);
+  font-size: var(--fs-sm);
+  flex-shrink: 0;
+}
+.confirm-card dd {
+  margin: 0;
+  text-align: right;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  min-width: 0;
+}
+.confirm-id {
+  font-weight: 800 !important;
+  letter-spacing: 0.04em;
+  font-size: var(--fs-md) !important;
+}
+.confirm-total {
+  padding-top: 14px;
+  border-top: 1px dashed var(--line-2);
+}
+.confirm-total dt,
+.confirm-total dd {
+  color: var(--ink);
+  font-size: var(--fs-lg) !important;
+  font-weight: 800 !important;
+}
+.confirm-note {
+  margin-top: 16px;
+  font-size: var(--fs-xs);
+  color: var(--ink-3);
+}
+.confirm-actions {
+  gap: 10px;
+}
