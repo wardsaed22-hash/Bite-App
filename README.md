@@ -8,7 +8,7 @@ website squeezed onto a phone.
 > **Demo project.** All restaurants, dishes, prices and people are fictional. There is no backend, no real
 > ordering and **no payment processing** — nothing leaves the browser.
 
-**Live demo:** _coming soon — `https://your-demo-url.example`_
+**Live demo:** [bite-app-demo.netlify.app](https://bite-app-demo.netlify.app)
 
 ---
 
